@@ -1,0 +1,251 @@
+{
+  "version": "Notebook/1.0",
+  "items": [
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookeee14cf5-648a-4f65-82a8-f77a51feb321",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Percentage CPU",
+            "aggregation": 3,
+            "splitBy": null
+          }
+        ],
+        "title": "Health Metrics - CPU",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "CPU"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookf141e4a4-db61-475b-8ece-d58bd9bb3748",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Available Memory Bytes",
+            "aggregation": 3,
+            "splitBy": null
+          }
+        ],
+        "title": "Health Metrics - Memory",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "Memory"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook42e06e92-5209-4d04-a6d6-6f16b3368a9e",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 259200000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--OS Disk IOPS Consumed Percentage",
+            "aggregation": 3,
+            "splitBy": null
+          },
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Data Disk IOPS Consumed Percentage",
+            "aggregation": 3
+          }
+        ],
+        "title": "Health Metrics - OS+Data Disk IOPS Percentage",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "OS +Data Disk IOPS Percentage"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook1a956989-de58-43b7-9d6c-a0e8032d25a9",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--OS Disk Read Operations/Sec",
+            "aggregation": 3,
+            "splitBy": null
+          },
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--OS Disk Write Operations/Sec",
+            "aggregation": 3
+          }
+        ],
+        "title": "Health Metrics - OS Disk IOPS",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "OS Disk IOPS"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbookff365399-f8d9-49d9-a582-9d83287a304f",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Disk Read Operations/Sec",
+            "aggregation": 3,
+            "splitBy": null
+          },
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Disk Write Operations/Sec",
+            "aggregation": 3
+          }
+        ],
+        "title": "Health Metrics - Data Disk IOPS",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "Data Disk IOPS"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbook77d8da6a-884a-4ebb-9eec-d9752b4139e3",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--OS Disk Read Bytes/sec",
+            "aggregation": 3,
+            "splitBy": null
+          },
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--OS Disk Write Bytes/sec",
+            "aggregation": 3
+          }
+        ],
+        "title": "Health Metrics - OS Disk Throughput",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "OS Disk Throughput"
+    },
+    {
+      "type": 10,
+      "content": {
+        "chartId": "workbooke26f131a-8919-46c5-b3fd-cde663bf12d4",
+        "version": "MetricsItem/2.0",
+        "size": 0,
+        "chartType": 2,
+        "resourceType": "microsoft.compute/virtualmachines",
+        "metricScope": 0,
+        "resourceIds": [
+          "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+        ],
+        "timeContext": {
+          "durationMs": 86400000
+        },
+        "timeGrain": "PT1M",
+        "metrics": [
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Data Disk Read Bytes/sec",
+            "aggregation": 3,
+            "splitBy": null
+          },
+          {
+            "namespace": "microsoft.compute/virtualmachines",
+            "metric": "microsoft.compute/virtualmachines--Data Disk Write Bytes/sec",
+            "aggregation": 3
+          }
+        ],
+        "title": "Health Metrics - Data Disk Throughput",
+        "gridSettings": {
+          "rowLimit": 10000
+        }
+      },
+      "name": "Data Disk Throughput"
+    }
+  ],
+  "fallbackResourceIds": [
+    "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Compute/virtualMachines/virtualMachineName"
+  ],
+  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+}
