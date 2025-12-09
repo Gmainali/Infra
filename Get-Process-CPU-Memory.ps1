@@ -1,4 +1,4 @@
-# PowerShell Script: Monitor `diawp` Process Memory and CPU
+## PowerShell Script: Monitor `diawp` Process Memory and CPU
 
 This repository contains a **PowerShell script** to monitor all instances of the `diawp` process and report CPU usage and multiple memory metrics, including **Working Set, Commit, Private, and Shareable memory**. It also includes a timestamp for when the script was run.
 
@@ -55,14 +55,14 @@ $result = foreach ($p in $plist) {
     }
 }
 
-$result | Format-Table -AutoSize
+$result | Format-Table -AutoSize```
 
 
 ## Example Output
-DateTime            Name   PID   WorkingSet_MB PrivateMemorySize_MB PrivateWorkingSet_MB CPU
+```DateTime            Name   PID   WorkingSet_MB PrivateMemorySize_MB PrivateWorkingSet_MB CPU
 --------            ----   ---   ------------- -------------------- --------------------- ---
 2025-12-09 14:25:01 diawp 3096  78.44         52.10                28.80                1.98
-2025-12-09 14:25:01 diawp 4100  12.33         10.15                8.90                 0.55
+2025-12-09 14:25:01 diawp 4100  12.33         10.15                8.90                 0.55```
 
 
 ## Notes:
