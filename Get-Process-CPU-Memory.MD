@@ -55,15 +55,17 @@ $result = foreach ($p in $plist) {
     }
 }
 
-$result | Format-Table -AutoSize```
+$result | Format-Table -AutoSize
+```
 
 
 ## Example Output
-```DateTime            Name   PID   WorkingSet_MB PrivateMemorySize_MB PrivateWorkingSet_MB CPU
+```
+DateTime            Name   PID   WorkingSet_MB PrivateMemorySize_MB PrivateWorkingSet_MB CPU
 --------            ----   ---   ------------- -------------------- --------------------- ---
 2025-12-09 14:25:01 diawp 3096  78.44         52.10                28.80                1.98
-2025-12-09 14:25:01 diawp 4100  12.33         10.15                8.90                 0.55```
-
+2025-12-09 14:25:01 diawp 4100  12.33         10.15                8.90                 0.55
+```
 
 ## Notes:
 - The script automatically handles multiple diawp processes.
