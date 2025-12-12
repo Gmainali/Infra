@@ -8,12 +8,11 @@ Get-ADComputerOSInfo is a PowerShell script that:
 - This is useful for OS inventory, audit reports, migration planning, and compliance tracking.
 
 ##📁 CSV Input Format
-
 Your input CSV must contain a column named Name:
-```Name
+'''Name
 PC001
 PC002
-PC003```
+PC003'''
 
 Place it at:
 C:\temp\computer.csv
@@ -28,7 +27,7 @@ C:\temp\computer.csv
 Run the script:
 💻 Script: Get-ADComputerOSInfo.ps1
 
-```Import-Module ActiveDirectory
+'''Import-Module ActiveDirectory
 # Import CSV with computer names
 $computers = Import-Csv -Path "C:\temp\computer.csv"
 
@@ -56,7 +55,7 @@ $results = foreach ($c in $computers) {
 # Export results to CSV
 $results | Export-Csv -Path "C:\temp\computer1.csv" -NoTypeInformation
 
-Write-Host "Export complete"```
+Write-Host "Export complete"'''
 
 ##📤 Output
 The script generates:
@@ -64,10 +63,10 @@ The script generates:
 
 
 ##Example output:
-```ComputerName,OperatingSystem,OSVersion
+'''ComputerName,OperatingSystem,OSVersion
 PC001,Windows 10 Pro,10.0.19045
 PC002,Windows 11 Enterprise,10.0.22631
-PC003,Not found,Not found```
+PC003,Not found,Not found'''
 
 ##📌 Notes
 - Computers missing from AD will be labeled "Not found".
