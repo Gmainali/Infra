@@ -43,7 +43,7 @@ $results = foreach ($c in $computers) {
 # Export results to CSV
 $results | Export-Csv -Path "C:\temp\computer1.csv" -NoTypeInformation
 
-Write-Host "Export complete"
+Write-Host "Export complete"```
 
 ---
 
