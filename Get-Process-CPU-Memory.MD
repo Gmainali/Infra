@@ -19,7 +19,7 @@ This repository contains a **PowerShell script** to monitor all instances of the
 | Private (KB)       | `WorkingSetPrivate` (WMI)  | RAM used only by this process (cannot be shared) | Resource Monitor Private |
 | Shareable (KB)     | `WorkingSet64 - WorkingSetPrivate` | RAM that could be shared (DLLs, shared mappings) | Resource Monitor Shareable               |
 
-> `Task Manager “Memory”` ≈ Private Working Set, but not always identical
+> `Task Manager “Memory”` ≈ Private Working Set, but not always identical,
 > `Resource Monitor “Private”` = WorkingSetPrivate (the real private RAM)
 
 ---
@@ -29,6 +29,19 @@ This repository contains a **PowerShell script** to monitor all instances of the
 - Minus pages that Windows has deprioritized
 - Minus pages that were paged out
 - Resource Monitor shows the full picture.
+
+---
+## 🧠 Quick example using your numbers
+Your Resource Monitor values:
+Working Set = **291,476 KB**
+Private = **188,620 KB**
+Shareable = **102,856 KB**
+
+Check the math:
+Private + Shareable = 188,620 + 102,856 = **291,476**
+Perfect match — that’s exactly how Working Set is built.
+
+Task Manager shows **66.4 MB** because it is showing a trimmed private working set, not the full private memory.
 
 ---
 ## Script Usage
