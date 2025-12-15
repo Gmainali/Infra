@@ -14,12 +14,21 @@ This repository contains a **PowerShell script** to monitor all instances of the
 
 | Memory Type        | PowerShell Property          | Description                                                | Matches                                     |
 |-------------------|-----------------------------|------------------------------------------------------------|---------------------------------------------|
-| Working Set (KB)   | `WorkingSet64`              | Total physical RAM currently used by the process, including private and shareable memory | Resource Monitor “Working Set”             |
-| Commit (KB)        | `PrivateMemorySize64`       | Virtual memory reserved for the process                     | Resource Monitor “Commit”                   |
-| Private (KB)       | `WorkingSetPrivate` (WMI)  | Memory used **only by this process** and cannot be shared | Task Manager “Memory” + Resource Monitor “Private” |
-| Shareable (KB)     | `WorkingSet64 - WorkingSetPrivate` | Memory that can potentially be shared with other processes (e.g., DLLs) | Resource Monitor “Shareable”               |
+| Working Set (KB)   | `WorkingSet64`              | Total RAM currently mapped to the process (private + shareable) | Resource Monitor “Working Set”             |
+| Commit (KB)        | `PrivateMemorySize64`       | Virtual memory reserved (RAM + page file). Not actual RAM usage. | Resource Monitor “Commit”                   |
+| Private (KB)       | `WorkingSetPrivate` (WMI)  | RAM used only by this process (cannot be shared) | Resource Monitor Private |
+| Shareable (KB)     | `WorkingSet64 - WorkingSetPrivate` | RAM that could be shared (DLLs, shared mappings) | Resource Monitor Shareable               |
 
-> Note: `PrivateWorkingSet` via WMI may not be available for all processes. In those cases, it will display `"N/A"`.
+> `Task Manager “Memory”` ≈ Private Working Set, but not always identical
+> `Resource Monitor “Private”` = WorkingSetPrivate (the real private RAM)
+
+---
+## 🧩 Why Task Manager shows a smaller number
+- Task Manager trims and filters memory to show:
+- Private Working Set only
+- Minus pages that Windows has deprioritized
+- Minus pages that were paged out
+- Resource Monitor shows the full picture.
 
 ---
 ## Script Usage
