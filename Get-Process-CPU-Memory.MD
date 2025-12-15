@@ -22,6 +22,14 @@ This repository contains a **PowerShell script** to monitor all instances of the
 > `Task Manager “Memory”` ≈ Private Working Set, but not always identical,
 > `Resource Monitor “Private”` = WorkingSetPrivate (the real private RAM)
 
+
+| Memory Type	| What it means	| Easy example |
+|---------------|------------------------------------|------------------------------| 
+| Commit	    | Reserved memory (RAM + page file)	 | Storage room reserved
+| Working Set	| Memory currently in RAM	         | Stuff on your desk
+| Shareable	    | RAM that could be shared	         | Books coworkers can also use
+| Private	    | RAM only this process uses	     | Your personal notes
+
 ---
 ## 🧩 Why Task Manager shows a smaller number
 - Task Manager trims and filters memory to show:
@@ -32,16 +40,16 @@ This repository contains a **PowerShell script** to monitor all instances of the
 
 ---
 ## 🧠 Quick example using your numbers
-Your Resource Monitor values:
-Working Set = **291,476 KB**
-Private = **188,620 KB**
-Shareable = **102,856 KB**
+Your Resource Monitor values:<br>
+Working Set = **291,476 KB**<br>
+Private = **188,620 KB**<br>
+Shareable = **102,856 KB**<br>
 
-Check the math:
-Private + Shareable = 188,620 + 102,856 = **291,476**
-Perfect match — that’s exactly how Working Set is built.
+Check the math:<br>
+Private + Shareable = 188,620 + 102,856 = **291,476**<br>
+Perfect match — that’s exactly how Working Set is built.<br>
 
-Task Manager shows **66.4 MB** because it is showing a trimmed private working set, not the full private memory.
+Task Manager shows **66.4 MB** because it is showing a trimmed private working set, not the full private memory.<br>
 
 ---
 ## Script Usage
