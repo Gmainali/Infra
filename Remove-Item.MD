@@ -118,13 +118,19 @@ $DatetoDelete = $CurrentDate.AddDays($Daysback)
 Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item
 ```
 
+# Cache folder
+- C:\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\IE
+- C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\IE
+- C:\Users\Svc-Account\AppData\Local\Microsoft\Windows\INetCache\IE
+
 Notes:
-* $Path can point to any folder, e.g., the Internet Explorer cache folder: C:\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\IE. This allows cleaning browser cache for the system profile.
+* $Path can point to any folder, e.g., the Internet Explorer cache folder: This allows cleaning browser cache for the system profile.
 * $Daysback defines how old a file must be to be deleted.
 * Remove-Item deletes the files permanently, so test with a dry run first:
 
 ```Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | 
-ForEach-Object { Write-Host "Would delete: $($_.FullName)" }```
+ForEach-Object { Write-Host "Would delete: $($_.FullName)" }
+```
 
 * Useful for log rotation, cleanup scripts, or system maintenance.
 
@@ -132,7 +138,9 @@ ForEach-Object { Write-Host "Would delete: $($_.FullName)" }```
 
 ## Native Command Processor
 # Remove files older than 150 days
-forfiles /p "C:\Temp\Logs" /s /d -150 /c "cmd /c del /f /q @path"
+
+```forfiles /p "C:\Temp\Logs" /s /d -150 /c "cmd /c del /f /q @path"
+```
 
 ---
 
