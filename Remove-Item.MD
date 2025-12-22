@@ -24,7 +24,8 @@ while ($true) {
     }
     Start-Sleep -Seconds $PauseSec
 }
-Write-Host "All files deleted in controlled batches."```
+Write-Host "All files deleted in controlled batches."
+```
 
 ---
 
@@ -114,7 +115,8 @@ $Daysback = -150
 $CurrentDate = Get-Date
 $DatetoDelete = $CurrentDate.AddDays($Daysback)
 
-Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item```
+Get-ChildItem $Path | Where-Object { $_.LastWriteTime -lt $DatetoDelete } | Remove-Item
+```
 
 Notes:
 * $Path can point to any folder, e.g., the Internet Explorer cache folder: C:\Windows\SysWOW64\config\systemprofile\AppData\Local\Microsoft\Windows\INetCache\IE. This allows cleaning browser cache for the system profile.
@@ -140,4 +142,5 @@ New-Item -ItemType Directory -Force -Path $Path | Out-Null
 
 1..20000 | ForEach-Object {
     New-Item -Path "$Path\file1_$_.log" -ItemType File | Out-Null
-}```
+}
+```
