@@ -137,7 +137,7 @@ ForEach-Object { Write-Host "Would delete: $($_.FullName)" }
 ---
 
 ## Native Command Processor
-# Remove files older than 150 days
+### Remove files older than 150 days
 
 forfiles /p "C:\Temp\Logs" /s /d -150 /c "cmd /c del /f /q @path"
 
@@ -150,4 +150,10 @@ New-Item -ItemType Directory -Force -Path $Path | Out-Null
 1..20000 | ForEach-Object {
     New-Item -Path "$Path\file1_$_.log" -ItemType File | Out-Null
 }
+```
+
+---
+
+## Directory Structure
+```Get-ChildItem -Path "C:\Users\" -Recurse -Directory | Select-Object FullName | Export-Csv -Path "c:\users\admin\desktop\exportfoldersroot.csv" -NoTypeInformation -Append
 ```
