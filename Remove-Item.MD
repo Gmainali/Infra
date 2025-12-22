@@ -155,5 +155,5 @@ New-Item -ItemType Directory -Force -Path $Path | Out-Null
 ---
 
 ## Directory Structure
-```Get-ChildItem -Path "C:\Users\" -Recurse -Directory | Select-Object FullName | Export-Csv -Path "c:\users\admin\desktop\exportfoldersroot.csv" -NoTypeInformation -Append
-```
+Get-ChildItem -Path "C:\Users\" -Recurse -Directory | Select-Object FullName | Export-Csv -Path "c:\users\admin\desktop\exportfoldersroot.csv" -NoTypeInformation -Append
+
